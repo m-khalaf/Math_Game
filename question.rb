@@ -7,21 +7,13 @@ class Question
     @answer = @num1 + @num2
   end
 
-  def question
-    puts "what does #{@num1} plus #{@num2} equal ?"
+  def ask_question(player)
+   puts "#{player}: what does #{@num1} plus #{@num2} equal ?"
   end
 
-  def answer
-    user_answer = gets.chomp.to_i
-    if user_answer == @answer
-      puts true
-    else
-      puts false
-    end
+  def check_answer (user_answer)
+    user_answer == @answer
   end
 
 end
 
-q1=Question.new
-q1.question
-q1.answer
